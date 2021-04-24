@@ -30,6 +30,8 @@ public class SuggestedBooks
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="id")
 	private Users users;
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="id")
 	private Books books;
 	private String title;
 	private String subject;

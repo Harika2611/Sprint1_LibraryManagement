@@ -6,6 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/*********************************************************************************************
+ * 
+ * @author SriHarika
+ * Description: This class is used for entity mapping and for generating getters and setter for Books
+ * Version: v1.1
+ * Created date: 16 April 2021
+ *
+ *********************************************************************************************/
 @Entity
 @Table(name="Books1")
 public class Books 

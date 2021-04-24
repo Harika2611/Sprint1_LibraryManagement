@@ -9,6 +9,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+/*********************************************************************************************
+ * 
+ * @author SriHarika
+ * Description: This class is used for entity mapping and for generating getters and setter for Damaged Books
+ * Version: v1.1
+ * Created date: 16 April 2021
+ *
+ *********************************************************************************************/
 @Entity
 @Table(name= "DamagedBooks1")
 public class DamagedBooks 

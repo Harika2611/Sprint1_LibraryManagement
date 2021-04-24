@@ -10,6 +10,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+/*********************************************************************************************
+ * 
+ * @author SriHarika
+ * Description: This class is used for entity mapping and for generating getters and setter for Suggested Books
+ * Version: v1.1
+ * Created date: 16 April 2021
+ *
+ *********************************************************************************************/
 @Entity
 @Table(name= "SuggestedBooks1")
 
@@ -21,6 +30,7 @@ public class SuggestedBooks
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="id")
 	private Users users;
+	private Books books;
 	private String title;
 	private String subject;
 	private String author;
@@ -32,12 +42,13 @@ public class SuggestedBooks
 	public SuggestedBooks() {
 		super();
 	}
-	
-	public SuggestedBooks(int id, Users users, String title, String subject, String author, String publications,
-			String description, Date suggested_date, String status) {
+
+	public SuggestedBooks(int id, Users users, Books books, String title, String subject, String author,
+			String publications, String description, Date suggested_date, String status) {
 		super();
 		this.id = id;
 		this.users = users;
+		this.books = books;
 		this.title = title;
 		this.subject = subject;
 		this.author = author;
@@ -46,6 +57,7 @@ public class SuggestedBooks
 		this.suggested_date = suggested_date;
 		this.status = status;
 	}
+
 
 	public int getId() {
 		return id;
@@ -59,6 +71,14 @@ public class SuggestedBooks
 	public void setUsers(Users users) {
 		this.users = users;
 	}
+	public Books getBooks() {
+		return books;
+	}
+
+	public void setBooks(Books books) {
+		this.books = books;
+	}
+
 	public String getTitle() {
 		return title;
 	}
@@ -101,10 +121,11 @@ public class SuggestedBooks
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
 	@Override
 	public String toString() {
-		return "SuggestedBooks [id=" + id + ", users=" + users + ", title=" + title + ", subject=" + subject
-				+ ", author=" + author + ", publications=" + publications + ", description=" + description
+		return "SuggestedBooks [id=" + id + ", users=" + users + ", books=" + books + ", title=" + title + ", subject="
+				+ subject + ", author=" + author + ", publications=" + publications + ", description=" + description
 				+ ", suggested_date=" + suggested_date + ", status=" + status + "]";
 	}
 	

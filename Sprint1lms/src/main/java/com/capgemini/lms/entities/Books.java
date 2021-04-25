@@ -31,7 +31,7 @@ public class Books
 	private double book_cost;
 	private String shelf_details;
 	
-	public Books() {
+	public Books(String string, String string2, String string3, String string4, int i, String string5, int j, double d, String string6) {
 		super();
 	}
 	
